@@ -1,41 +1,22 @@
-<<<<<<< HEAD
 <!DOCTYPE HTML>
-
 <html>
-
-<head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>Интересный Никита</title>
-        <script src="typeracer.js"></script>
-</head>
-
-<body>
-        <center><button id="ngButton" onclick="new_game();">Новая игра</button></center>
-<output id="Out_txt"></output>
-<br />
-
-<textarea disabled=true oninput="checkin();" id="input_value" autofocus=true cols=140 style="border-color:blue; border-width: 2px; resize: none" ></textarea>
-<br />
-
-</body>
-=======
-<!DOCTYPE HTML>
-
-<html>
-
-<head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>Интересный Никита</title>
-        <script src="typeracer.js"></script>
-</head>
-
-<body>
-        <center><button id="ngButton" onclick="new_game();">Новая игра</button></center>
-<output id="Out_txt"></output>
-<br />
-<textarea disabled=true oninput="checkin();" id="input_value" autofocus=true cols=140 style="border-color:blue; border-width: 2px; resize: none" ></textarea>
-<br />
-
-</body>
->>>>>>> 87fe218f84584b95aa43893b697e417a3c9fdb5e
+  <head>        
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />        
+    <title>typeracer by Интересный Никита</title>        
+<script src="typeracer.js"></script>
+  </head>
+  <body>        
+    <center>
+      <button id="new_game_Button" onclick="new_game();">Новая игра</button>
+    </center>
+    <output id="task"></output><br />
+<textarea disabled=true oninput="check();" id="intext" autofocus=true cols=140 style="border-width: 2px; resize: none" ></textarea><br />
+Осталось <output id="timer"></output>секунд(ы/а)<br />
+    <p>    
+        <h3>Правила игры:</h3>    
+        Для начала игры нажмите "Новая игра". 
+        Затем необходимо ввести предложенную строку текста в поле ниже. 
+        Если Вы ошибетесь, то поле подсветится красным; зеленая подсветка поля свидетельствует об успешном прохождении.  
+    </p>
+  </body>
 </html>
