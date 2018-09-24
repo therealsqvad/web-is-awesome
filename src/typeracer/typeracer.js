@@ -1,12 +1,21 @@
 document.onselectstart = test;
 function test() {return false;}
 var c = 60;
+var sc =0;
+var speed = 0;
 function new_game(){
     setTimeout("document.getElementById('task').textContent='3...'",1000);
     setTimeout("document.getElementById('task').textContent='2...'",2000);
     setTimeout("document.getElementById('task').textContent='1...'",3000);
-    setTimeout("generate_text(); document.getElementById('intext').disabled = false; c = 60; timedCount();",4000); 
-    
+    setTimeout("generate_text(); document.getElementById('intext').disabled = false; c = 60; timedCount(); speedTimer();",4000);     
+}
+
+function speedTimer()
+{
+speed = document.getElementById("intext").value.length/sc*60;
+document.getElementById('speed_timer').value=speed.toFixed(2);
+sc=sc+3;
+t=setTimeout("speedTimer()",3000);
 }
 
 function timedCount()
@@ -24,7 +33,6 @@ else{
 
 
 function check(){
-    console.log(document.getElementById("intext").value);
     if (document.getElementById("intext").value == document.getElementById("task").textContent)
 {document.getElementById("intext").style.borderColor="green";} 
 else{
