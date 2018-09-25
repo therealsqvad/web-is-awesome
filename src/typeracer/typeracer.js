@@ -7,7 +7,7 @@ function new_game(){
     setTimeout("document.getElementById('task').textContent='3...'",1000);
     setTimeout("document.getElementById('task').textContent='2...'",2000);
     setTimeout("document.getElementById('task').textContent='1...'",3000);
-    setTimeout("generate_text(); document.getElementById('intext').disabled = false; c = 60; timedCount(); speedTimer();",4000);     
+    setTimeout("generate_text(); document.getElementById('intext').disabled = false; c = document.getElementById('task').textContent.length; timedCount(); speedTimer();",4000);     
 }
 
 function speedTimer()
