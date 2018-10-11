@@ -29,8 +29,9 @@
    width: 80%;
 }
 
-.timer_block {
+#timer_block {
     width: 100%;
+    visibility: hidden;
 }
 
 #left {

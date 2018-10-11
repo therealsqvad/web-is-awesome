@@ -1,39 +1,41 @@
 <!DOCTYPE HTML>
 <html>
-  <head>        
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />        
-    <title>typeracer by Интересный Никита</title>        
-<script src="typeracer.js"></script>
-<link rel="stylesheet" type="text/css" href="style.css" />
-  </head>
-  <body>   
-    <div class="main shad">   
-      <div id=left>
-        <div class="life_block">Life: </div> 
-        <div class="task_text main"><output id="task">Начните игру и тут появится текст</output></div>
-        <textarea disabled=true oninput="check();" id="intext" autofocus=true style="margin-top: 3px; border-width: 2px; resize: none; width: 80%; margin-left: 10%;" ></textarea>
-      </div>
-      <div id=right>
-        <div class="timer_block">
-            Осталось <output id="timer"></output>секунд(ы/а)<br />
-            Скорость набора:<br /> <output id="speed_timer" style="margin-left: 40%"></output> <br />символов/минуту
-        </div>
-        <button id="new_game_Button" onclick="new_game();" style="margin-left: 25%; margin-right: auto; width: 50%">Новая игра</button>
-      </div>
-     
 
-      <br>
-      
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>typeracer by Интересный Никита</title>
+  <script src="typeracer.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+  <div class="main shad">
+    <div id=left>
+      <div class="life_block">Life: <output id="lifes"></output> </div>
+      <div class="task_text main"><output id="task">Начните игру и тут появится текст</output></div>
+      <textarea disabled=true oninput="check();" id="intext" autofocus=true style="margin-top: 3px; border-width: 2px; resize: none; width: 80%; margin-left: 10%;">Сюда Вы будете вводить текст</textarea>
+    </div>
+    <div id=right>
+      <div id="timer_block">
+        Осталось <output id="timer"></output> секунд(ы/а)<br />
+        Скорость набора:<br /> <output id="speed_timer" style="margin-left: 40%"></output> <br />символов/минуту
+      </div>
+      <button id="new_game_Button" onclick="new_game();" style="margin-left: 25%; margin-right: auto; width: 50%">Новая
+        игра</button>
+        <button id="pause_Button" onclick="" style="visibility: hidden; margin-top:3px; margin-left: 25%; margin-right: auto; width: 50%">Пауза</button>
+    </div>
+
     <div id=rules>
-<br />
 
 
-    <p>    
-        <h3>Правила игры:</h3>    
-        Для начала игры нажмите "Новая игра". 
-        Затем необходимо ввести предложенную строку текста в поле ниже. 
-        Если Вы ошибетесь, то поле подсветится красным; зеленая подсветка поля свидетельствует об успешном прохождении.  
-    </p></div>
-  </div> 
-  </body>
+      <p>
+        <h3>Правила игры:</h3>
+        Для начала игры нажмите "Новая игра".
+        Затем необходимо ввести предложенную строку текста в поле ниже.
+        Если Вы ошибетесь, то поле подсветится красным; зеленая подсветка поля свидетельствует об успешном прохождении.
+      </p>
+    </div>
+  </div>
+</body>
+
 </html>
