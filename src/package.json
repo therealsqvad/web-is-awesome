@@ -1,0 +1,12 @@
+{ 
+    "name": "typeracer_sqvad", 
+    "version": "1.0.0", 
+    "description": "Typeracer by Klepov Nikita", 
+    "main": "typeracer.js", 
+    "scripts": { 
+        "build": "webpack -p",
+        "watch": "webpack --watch"
+    }, 
+    "author": "Klepov Nikita", 
+    "license": "Free" 
+  }

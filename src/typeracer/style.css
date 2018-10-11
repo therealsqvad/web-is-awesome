@@ -1,0 +1,48 @@
+.main { /*основной контент (текст, картинки на белом фоне которые)*/
+	border-radius: 10px; /*закругление блока*/
+	width: 70%; /*ширина основного блока 70% экрана*/
+	background: #FFF; /*белый фон*/
+	margin-top: 5px; /*чтобы сверху не было тени, а как бы заезжало под меню (отступ на -3 px)*/
+	margin-left: 15%; /*отступ слева 15% (чтобы контент был по центру)*/
+    padding: 10px;
+}
+
+.shad {  /*создание тени (3D эффекта) для центрального блока*/
+	content: "";
+	position: relative;
+	box-shadow: 0 0 20px rgba(0,0,0,0.8);/*тень элемента*/
+}
+
+.task_text {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    width: 70%;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+    height: auto;
+}
+
+.life_block {
+   width: 80%;
+}
+
+.timer_block {
+    width: 100%;
+}
+
+#left {
+    float: left; 
+    width: 80%;
+}
+
+#right {
+    float:right;
+    width: 20%;
+}
+
+#rules {
+    clear: both;
+}
