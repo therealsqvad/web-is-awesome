@@ -19,14 +19,13 @@
     border-color: black;
     width: 70%;
     background-color: aliceblue;
-    display: flex;
-    align-items: center;
     min-height: 60px;
     height: auto;
 }
 
 .life_block {
    width: 80%;
+
 }
 
 #timer_block {
@@ -46,4 +45,11 @@
 
 #rules {
     clear: both;
+}
+
+.life_icon {
+    width: 16px;
+    height: 16px;
+    background-image: url('life.png');
+    display: inline-block;
 }
