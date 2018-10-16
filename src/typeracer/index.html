@@ -4,23 +4,24 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>typeracer by Интересный Никита</title>
-  <script src="typeracer.js"></script>
+ 
   <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
 <body>
+
   <div class="main shad">
     <div id=left>
       <div class="life_block" id="lb"> </div>
       <div class="task_text main"><span id="alreadytext" style="color:gray"></span><span id="task">Начните игру и тут появится текст</span></div>
-      <textarea disabled=true oninput="check();" id="intext" autofocus=true style="margin-top: 3px; border-width: 2px; resize: none; width: 80%; margin-left: 10%;">Сюда Вы будете вводить текст</textarea>
+      <textarea disabled=true  id="intext" autofocus=true style="margin-top: 3px; border-width: 2px; resize: none; width: 80%; margin-left: 10%;">Сюда Вы будете вводить текст</textarea>
     </div>
     <div id=right>
       <div id="timer_block">
         Осталось <output id="timer"></output> секунд(ы/а)<br />
         Скорость набора:<br /> <output id="speed_timer" style="margin-left: 40%"></output> <br />символов/минуту
       </div>
-      <button id="new_game_Button" onclick="new_game();" style="margin-left: 25%; margin-right: auto; width: 50%">Новая
+      <button id="new_game_Button" style="margin-left: 25%; margin-right: auto; width: 50%">Новая
         игра</button>
         <button id="pause_Button" onclick="pause_game();" style="visibility: hidden; margin-top:3px; margin-left: 25%; margin-right: auto; width: 50%">Пауза</button>
     <div id="records">Рекорды:<br /></div>
@@ -38,6 +39,7 @@
     </div>
   </div>
   <p id="result"></p>
+  <script src="./dist/bundle.js"></script>
 </body>
 
 </html>

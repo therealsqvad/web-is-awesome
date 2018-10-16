@@ -1,7 +1,12 @@
+ import generate_text from './generate.js';
 
+document.getElementById('new_game_Button').onclick = () => {new_game()};
+document.getElementById('pause_Button').onclick = () => {pause_game()};
+document.getElementById('intext').oninput = () => {check()};
 document.onselectstart = test;
 function test() { return false; }
 
+let text;
 let c;
 let t;
 let sc;
@@ -22,7 +27,7 @@ function speedTimer() {
         speed = input_count / sc * 60;
         document.getElementById('speed_timer').value = speed.toFixed(2);
         sc = sc + 3;
-        st = setTimeout("speedTimer()", 3000);
+        let st = setTimeout(speedTimer, 3000);
     }
 }
 
@@ -62,7 +67,7 @@ function stopTimer() {
 function start_game() {
     document.getElementById('records').innerText=document.cookie;
 
-    generate_text();
+    text = generate_text();
     current_length = 0;
     lifes = 3;
     for (let i = 0; i < lifes; i++) {
@@ -142,25 +147,3 @@ function check() {
     }
 };
 
-let text;
-function generate_text() {
-    var texts = new Array(15, "Ежедневно делайте зарядку и различные физические упражнения. Развивайте своё тело и дух.",
-        "Будьте благодарны Вселенной за каждый прожитый день.",
-        "Любите себя таким, какой вы есть, со всеми достоинствами и недостатками",
-        "Верьте только в самое лучшее и тогда в вашей жизни станет ещё больше приятных сюрпризов и хорошего настроения",
-        "Прочтите как можно больше биографий великих людей",
-        "Планируйте предстоящий день. Выделяйте наиболее приоритетные задачи, которые необходимо выполнить в первую очередь",
-        "Определите, что сейчас в жизни для вас наиболее важно и развивайтесь в этом направлении",
-        "Откажитесь от употребления алкоголя", "Пейте чистую воду и натуральные соки. Ограничьте употребление газированной воды",
-        "Пейте чистую воду и натуральные соки. Ограничьте употребление газированной воды", "Каждый день отмечайте для себя, насколько далеко вы продвинулись к своей цели. Помните, что каждый новый день - это шаг вперёд",
-        "Найдите для себя наставника. Учитесь у того, кто уже находится там, куда вы только стремитесь",
-        "Просыпайтесь в 6 утра. Утром можно успеть сделать гораздо больше дел, чем в течение дня, особенно, если вы творческий человек",
-        "Забудьте о своих недостатках. Вместо этого сосредоточьтесь на своих достоинствах",
-        "Ежемесячно откладывайте от 10 % от своего дохода. Инвестируйте в своё будущее",
-        "Контролируйте свои эмоции. Старайтесь как можно чаще улыбаться и быть в отличном настроении");
-    var RandomNumber = Math.round(Math.random() * (15) + 1);
-    text=texts[RandomNumber];
-    document.getElementById("task").textContent = text;
-
-
-}

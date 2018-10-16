@@ -1,12 +1,35 @@
-{ 
-    "name": "typeracer_sqvad", 
-    "version": "1.0.0", 
-    "description": "Typeracer by Klepov Nikita", 
-    "main": "typeracer.js", 
-    "scripts": { 
+{
+    "name": "typeracer_sqvad",
+    "version": "1.0.0",
+    "description": "Typeracer by Klepov Nikita",
+    "main": "typeracer.js",
+    "scripts": {
+        "dev": "webpack --mode development",
+        "start": "webpack-dev-server",
         "build": "webpack -p",
-        "watch": "webpack --watch"
-    }, 
-    "author": "Klepov Nikita", 
-    "license": "Free" 
-  }
+        "serv": "static build",
+        "watch": "webpack --watch",
+        "lint": "eslint */*.js",
+        "lint-css": "stylelint *.less"
+    },
+    "author": "Klepov Nikita",
+    "license": "Free",
+    "devDependencies": {
+        "babel-eslint": "^8.0.1",
+        "eslint": "^4.19.1",
+        "html-validator": "^2.2.3",
+        "husky": "^1.1.0",
+        "stylelint": "^8.2.0",
+        "stylelint-config-standard": "^17.0.0",
+        "webpack": "^4.20.2",
+        "webpack-cli": "^3.1.2"
+    },
+    "dependencies": {
+        "eslint-config-airbnb": "^15.1.0",
+        "eslint-plugin-import": "^2.7.0",
+        "eslint-plugin-jsx-a11y": "^6.0.2",
+        "eslint-plugin-react": "^7.3.0",
+        "expect.js": "^0.3.1",
+        "mocha": "^3.5.0"
+    }
+}
