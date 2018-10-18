@@ -98,7 +98,7 @@ function initializeHTML() {
 
 
 function pauseGame() {
-  console.log('test_test');
+  console.log('OKAY');
   if (!isPaused) {
     stopTimer();
     document.getElementById('pause_Button').textContent = 'Продолжить';
