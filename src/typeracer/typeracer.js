@@ -98,6 +98,7 @@ function initializeHTML() {
 
 
 function pauseGame() {
+  console.log('test_test');
   if (!isPaused) {
     stopTimer();
     document.getElementById('pause_Button').textContent = 'Продолжить';
